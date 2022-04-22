@@ -4,7 +4,7 @@ import {create} from 'react-test-renderer';
 import Login from '../src/screens/Login';
 import ContainerTest from '../src/helpers/containerTest';
 
-describe('Popular Card Snapshot', () => {
+describe('login snapshot', () => {
   test('should render', () => {
     const component = create(ContainerTest(<Login />)).toJSON();
     expect(component).toMatchSnapshot();
