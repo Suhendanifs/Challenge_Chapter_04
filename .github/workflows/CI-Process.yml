@@ -1,0 +1,30 @@
+name: CI Process
+
+on:
+  workflow_dispatch: # allow jobs manual run
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: instalasi modules
+        run: yarn
+
+  check-linter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: instalasi modules
+        run: yarn
+
+      - name: cleaning codes
+        run: yarn lint
