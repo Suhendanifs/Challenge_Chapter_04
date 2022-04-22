@@ -1,0 +1,8 @@
+# name: CD Prosses
+
+# on:
+#   workflow_dispatch: # allow jobs manual run
+#   push:
+#     branches: [main]
+#   pull_request:
+#     branches: [main]
