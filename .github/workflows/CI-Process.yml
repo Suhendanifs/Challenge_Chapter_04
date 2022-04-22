@@ -3,16 +3,16 @@ name: CI Process
 on:
   workflow_dispatch: # allow jobs manual run
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 
 jobs:
   testing:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+gi      - uses: actions/checkout@v2
 
       - name: instalasi modules
         run: yarn
