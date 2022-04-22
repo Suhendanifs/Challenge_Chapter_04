@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import {applyMiddleware, createStore} from 'redux';
 import {allReducers} from './allReducers';
 

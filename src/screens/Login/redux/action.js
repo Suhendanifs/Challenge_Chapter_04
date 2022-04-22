@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 export const SetLoginEmail = data => {
   return {
     type: 'SET_LOGIN_EMAIL',

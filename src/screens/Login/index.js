@@ -1,7 +1,14 @@
-import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Image,
+  TextInput,
+} from 'react-native';
 import React from 'react';
 import {moderateScale} from 'react-native-size-matters';
-import {Input} from '@rneui/base';
+// import {Input} from '@rneui/base';
 import {useDispatch, useSelector} from 'react-redux';
 import axios from 'axios';
 import {BaseUrl} from '../../helpers/Api';
@@ -40,11 +47,11 @@ const login = ({navigation}) => {
         source={require('../../Assets/Image/logo.png')}
       />
 
-      <Input
+      <TextInput
         placeholder="email"
         onChangeText={value => dispatch(SetLoginEmail(value))}
       />
-      <Input
+      <TextInput
         placeholder="password"
         onChangeText={value => dispatch(SetLoginPassword(value))}
         secureTextEntry={true}
@@ -69,6 +76,15 @@ const login = ({navigation}) => {
 export default login;
 
 const styles = StyleSheet.create({
+  input: {
+    color: 'black',
+    borderRadius: moderateScale(8),
+    backgroundColor: 'blue',
+    height: moderateScale(50),
+    paddingStart: moderateScale(16),
+    fontSize: moderateScale(14),
+    marginBottom: moderateScale(16),
+  },
   text1: {
     fontSize: moderateScale(20),
     fontWeight: '600',

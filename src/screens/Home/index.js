@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import {
   Text,
   View,
@@ -21,6 +22,7 @@ const Home = ({navigation}) => {
 
   useEffect(() => {
     getBuku();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getBuku = async () => {

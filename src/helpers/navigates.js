@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import {createNavigationContainerRef} from '@react-navigation/native';
 
 export const navigationRef = createNavigationContainerRef();
