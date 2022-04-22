@@ -1,9 +1,10 @@
-name: CD Prosses
+name: Deploy to telegram
 
 on:
   workflow_dispatch: # allow jobs manual run
   release:
     types: [published]
+
 jobs:
   send-to-telegram:
     name: send file to telegram
@@ -16,12 +17,13 @@ jobs:
         run: yarn
 
       - name: make gradle executable
-        run: chmod +x ./android/gradlew
+        run: chmod +x ./android/gradle
 
       - name: generate apk
         run: |
           cd android
-          ./gradlew assembleRelease
+          ./gradlew bundleRelease
+          cd ..
 
       - name: send file as messages
         run: |
