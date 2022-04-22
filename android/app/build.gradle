@@ -235,6 +235,11 @@ packagingOptions {
     buildTypes {
         release {
             signingConfig signingConfigs.release
+            if (nativeArchitectures) {
+                ndk {
+                    abiFilters nativeArchitectures.split(',')
+                }
+            }
         }
         release {
             // Caution! In production, you need to generate your own keystore file.
