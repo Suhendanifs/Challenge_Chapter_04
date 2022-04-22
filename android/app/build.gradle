@@ -129,20 +129,18 @@ def reactNativeArchitectures() {
 }
 
 android {
-
-packagingOptions {
-	pickFirst 'lib/x86/libc++_shared.so'
-	pickFirst 'lib/x86_64/libjsc.so'
-	pickFirst 'lib/arm64-v8a/libjsc.so'
-	pickFirst 'lib/arm64-v8a/libc++_shared.so'
-	pickFirst 'lib/x86_64/libc++_shared.so'
-	pickFirst 'lib/armeabi-v7a/libc++_shared.so'
-}
-
-
     ndkVersion rootProject.ext.ndkVersion
 
     compileSdkVersion rootProject.ext.compileSdkVersion
+
+    packagingOptions {
+	    pickFirst 'lib/x86/libc++_shared.so'
+	    pickFirst 'lib/x86_64/libjsc.so'
+	    pickFirst 'lib/arm64-v8a/libjsc.so'
+	    pickFirst 'lib/arm64-v8a/libc++_shared.so'
+	    pickFirst 'lib/x86_64/libc++_shared.so'
+	    pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+}
 
     defaultConfig {
         applicationId "com.bookapp"
@@ -235,11 +233,6 @@ packagingOptions {
     buildTypes {
         release {
             signingConfig signingConfigs.release
-            if (nativeArchitectures) {
-                ndk {
-                    abiFilters nativeArchitectures.split(',')
-                }
-            }
         }
         release {
             // Caution! In production, you need to generate your own keystore file.
