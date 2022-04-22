@@ -22,7 +22,7 @@ jobs:
       - name: generate apk
         run: |
           cd android
-          ./gradlew bundleRelease assembleRelease
+          ./gradlew assembleRelease
 
       - name: send file as messages
         run: |
