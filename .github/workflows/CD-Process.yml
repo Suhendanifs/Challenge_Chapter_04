@@ -1,8 +1,6 @@
-# name: CD Prosses
+name: CD proses
 
-# on:
-#   workflow_dispatch: # allow jobs manual run
-#   push:
-#     branches: [main]
-#   pull_request:
-#     branches: [main]
+on:
+  workflow_dispatch: # allow jobs manual run
+  release:
+    types: [published]
