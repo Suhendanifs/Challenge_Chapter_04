@@ -12,7 +12,7 @@ const Stack = createStackNavigator();
 
 export default function MainStack() {
   return (
-    <Stack.Navigator initialRouteName={'Login'}>
+    <Stack.Navigator initialRouteName={'Media'}>
       <Stack.Screen
         name="Home"
         component={Home}
